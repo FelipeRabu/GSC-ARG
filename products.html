@@ -48,121 +48,138 @@
 </nav>
 
 <!-- ===== PRODUCTOS ===== -->
+
+<!-- Botones -->
 <div class="row mt-5 d-flex justify-content-center">
 
-    <div class="col-12 col-sm-3 d-flex justify-content-center mr-4 ml-4 border pt-2">
+    <div onclick="toggle_visibility('productTable1'); hide_visibility('productTable2'); hide_visibility('productTable3')" id= 'product1' class="col-12 col-sm-3 d-flex justify-content-center mr-4 ml-4 border pt-2">
         <a href="#">
             <img src="images/adsorvente.png" alt="logo GCS" style="width:200px">
             <p class="border-top pt-3 text-center">Adsorbentes</p>
         </a>
     </div>
-    <div class="col-12 col-sm-3 d-flex justify-content-center mr-4 ml-4 border pt-2">
-        <a href="#product2">
+    <div onclick="toggle_visibility('productTable2'); hide_visibility('productTable1'); hide_visibility('productTable3')" id= 'product2' class="col-12 col-sm-3 d-flex justify-content-center mr-4 ml-4 border pt-2">
+        <a href="#">
             <img src="images/adsorvente.png" alt="logo GCS" style="width:200px">
             <p class="border-top pt-3 text-center">Oxidaque</p>
         </a>
     </div>
-    <div class="col-12 col-sm-3 d-flex justify-content-center mr-4 ml-4 border pt-2">
+    <div onclick="toggle_visibility('productTable3'); hide_visibility('productTable2'); hide_visibility('productTable1')" id= 'product3' class="col-12 col-sm-3 d-flex justify-content-center mr-4 ml-4 border pt-2">
         <a href="#">
             <img src="images/adsorvente.png" alt="logo GCS" style="width:200px">
-            <p class="border-top pt-3 text-center">Adsorbentes</p>
+            <p class="border-top pt-3 text-center">Hidrogenacion</p>
         </a>
     </div>
 
 </div>
 
-
 <div class="m-4">
 
-    <div class="mt-4 border-bottom border-danger">
-        <h3>Adsorbentes</h3>
+    <!-- Adsorbentes -->
+    <div id='productTable1' class='product-table' >
+        <div class="mt-4 border-bottom border-danger">
+            <h3>Adsorbentes</h3>
+        </div>
+        <div class="d-flex justify-content-center">
+        <div class="m-4 product-table-content">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Segmento</th>
+                    <th scope="col">Producto</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">Air poronga 1</th>
+                    <td>F69,10</td>
+                </tr>
+                <tr>
+                    <th scope="row">Air poronga 2</th>
+                    <td>Tu Vieja 1000</td>
+                </tr>
+                <tr>
+                    <th scope="row">Air poronga 3</th>
+                    <td>WD-40</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        </div>
     </div>
+    <!-- /Adsorbentes -->
 
-    <div class="d-flex justify-content-center">
-    <div class="m-4 product-table">
-        <table class="table">
-            <thead>
-            <tr>
-                <th scope="col">Segmento</th>
-                <th scope="col">Producto</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <th scope="row">Air poronga 1</th>
-                <td>F69,10</td>
-            </tr>
-            <tr>
-                <th scope="row">Air poronga 2</th>
-                <td>Tu Vieja 1000</td>
-            </tr>
-            <tr>
-                <th scope="row">Air poronga 3</th>
-                <td>WD-40</td>
-            </tr>
-            </tbody>
-        </table>
+    <!-- Oxidacion -->
+    <div id='productTable2' class='product-table'>
+        <div class="mt-4 border-bottom border-danger">
+            <h3>Oxidacion</h3>
+        </div>
+        <div class="d-flex justify-content-center">
+        <div class="m-4 product-table-content">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Segmento</th>
+                    <th scope="col">Producto</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">Air poronga 1</th>
+                    <td>F69,10</td>
+                </tr>
+                <tr>
+                    <th scope="row">Air poronga 2</th>
+                    <td>Tu Vieja 1000</td>
+                </tr>
+                <tr>
+                    <th scope="row">Air poronga 3</th>
+                    <td>WD-40</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        </div>
     </div>
-    </div>
+    <!-- /Oxidacion -->
 
-    <div class="mt-4 border-bottom border-danger" id="product2">
-        <h3>Oxidaque</h3>
+    <!-- Hidrogenacion -->
+    <div id='productTable3' class='product-table'>
+        <div class="mt-4 border-bottom border-danger">
+            <h3>Hidrogenacion</h3>
+        </div>
+        <div class="d-flex justify-content-center">
+        <div class="m-4 product-table-content">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Segmento</th>
+                    <th scope="col">Producto</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">Air poronga 1</th>
+                    <td>F69,10</td>
+                </tr>
+                <tr>
+                    <th scope="row">Air poronga 2</th>
+                    <td>Tu Vieja 1000</td>
+                </tr>
+                <tr>
+                    <th scope="row">Air poronga 3</th>
+                    <td>WD-40</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        </div>
     </div>
-
-    <div class="m-4">
-        <table class="table">
-            <thead>
-            <tr>
-                <th scope="col">Segmento</th>
-                <th scope="col">Producto</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <th scope="row">Air poronga 1</th>
-                <td>F69,10</td>
-            </tr>
-            <tr>
-                <th scope="row">Air poronga 2</th>
-                <td>Tu Vieja 1000</td>
-            </tr>
-            <tr>
-                <th scope="row">Air poronga 3</th>
-                <td>WD-40</td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
+    <!-- /Hidrogenacion -->
 
 
-    <div class="mt-4 border-bottom border-danger">
-        <h3>Adsorbentes</h3>
-    </div>
 
-    <div class="m-4">
-        <table class="table">
-            <thead>
-            <tr>
-                <th scope="col">Segmento</th>
-                <th scope="col">Producto</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <th scope="row">Air poronga 1</th>
-                <td>F69,10</td>
-            </tr>
-            <tr>
-                <th scope="row">Air poronga 2</th>
-                <td>Tu Vieja 1000</td>
-            </tr>
-            <tr>
-                <th scope="row">Air poronga 3</th>
-                <td>WD-40</td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
+    
 
 </div>
 

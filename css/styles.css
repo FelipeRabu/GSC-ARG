@@ -65,7 +65,6 @@ li {
     margin-left: 60px;
     font-size: 15px;
     font-weight: bolder;
-    background-color: #d6d5d9b7;
 }
 
 .mynavbar-item:hover {
@@ -96,14 +95,18 @@ li {
 
 .home-content {
     background-color: #d6d5d993;
-    height: 650px;
-}
-
-.prueba {
-    background-color: turquoise;
+    height: 600 px;
 }
 
 .product-table {
+    display: none;
+}
+
+.product-table-on {
+    display: block;
+}
+
+.product-table-content {
     width: 80%;
 }
 
@@ -112,19 +115,39 @@ li {
     color: #fffffc;
 }
 
+
+
 @media (min-width: 375px){
     .home-content {
-        height: 500px;
+        height: 600px;
     }
 }
 
 @media (min-width: 425px){
     .home-content {
-        height: 400px;
+        height: 200px;
+    }
+}
+
+@media (min-width: 600px){
+    .home-content {
+        height: 200px;
     }
 }
 
 @media (min-width: 768px){
+    .home-content {
+        height: 200px;
+    }
+}
+
+@media (min-width: 905px){
+    .home-content {
+        height: 50px;
+    }
+}
+
+@media (min-width: 992px){
     .home-content {
         height: 300px;
     }
@@ -132,7 +155,19 @@ li {
 
 @media (min-width: 1024px){
     .home-content {
-        height: 200px;
+        height: 250px;
+    }
+}
+
+@media (min-width: 1111px){
+    .home-content {
+        height: 300px;
+    }
+}
+
+@media (min-width: 1400px){
+    .home-content {
+        height: 100px;
     }
 }
 
