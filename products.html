@@ -1,48 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <title>GCS SAS</title>
-    
-        <!-- Bootstrap Stylesheet -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    
-        <!-- Font Awesome Stylesheet -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-        
-        <!-- Own Stylesheet -->
-        <link rel="stylesheet" href="css/styles.css">
-    
-        <!--ScrollReveal VER PARA QUE SIRVE ESTO -->
-        <script src="https://unpkg.com/scrollreveal"></script>
-    </head>
-    
-<body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>GCS SAS</title>
 
+    <!-- Bootstrap Stylesheet -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Font Awesome Stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    
+    <!-- Own Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!--ScrollReveal VER PARA QUE SIRVE ESTO -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+
+<body>
 <!-- ===== HEADER ===== -->
 <header>
     <div class="row justify-content-between">
         <!--Logo-->
         <div class="d-flex align-items-center justify-content-center col-12">
             <a href="index.html" class="logo">
-                <img src="images/logo.jpg" alt="logo GCS" style="width:200px;">
+                <img src="images/logo.jpg" class="GSC-logo" alt="logo GCS">
             </a>
         </div>   
     </div> 
 </header>
+
 <!-- ===== NAV BAR ===== -->
-<nav class="navbar sticky-top navbar-expand-sm mynavbar">
-    <button class="navbar-toggler mr-auto ml-auto" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+<nav class="navbar navbar-expand-sm mynavbar">
+    <button class="navbar-toggler mr-auto ml-auto" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">    
+        <span class="fas fa-bars"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
         <div class="navbar-nav text-center mr-auto ml-auto">
-            <a class="nav-item nav-link mynavbar-item" href="#">PERFIL</a>
             <div class="mynavbar-item-border"></div>
-            <a class="nav-item nav-link mynavbar-item" href="./productos.html">PRODUCTOS</a>
+            <a class="nav-item nav-link mynavbar-item" href="./index.html">PERFIL</a>
+            
             <div class="mynavbar-item-border"></div>
-            <a class="nav-item nav-link mynavbar-item" href="#pruebaSalto">CONTACTO</a>
+            <a class="nav-item nav-link mynavbar-item" href="./products.html">PRODUCTOS</a>
+            
+            <div class="mynavbar-item-border"></div>
+            <a class="nav-item nav-link mynavbar-item" href="./contact.html">CONTACTO</a>
+            <div class="mynavbar-item-border"></div>
         </div>
     </div>
 </nav>
@@ -51,20 +55,23 @@
 
 <!-- Botones -->
 <div class="row mt-5 d-flex justify-content-center">
-
-    <div onclick="toggle_visibility('productTable1'); hide_visibility('productTable2'); hide_visibility('productTable3')" id= 'product1' class="col-12 col-sm-3 d-flex justify-content-center mr-4 ml-4 border pt-2">
+    
+    <!-- Adsorbentes -->
+    <div onclick="button_click('productTable1', 'product1'); button_click_remove('productTable2', 'product2'); button_click_remove('productTable3', 'product3')" id= 'product1' class="product-button col-12 col-sm-3 d-flex justify-content-center mr-4 ml-4 pt-4">
         <a href="#">
             <img src="images/adsorvente.png" alt="logo GCS" style="width:200px">
             <p class="border-top pt-3 text-center">Adsorbentes</p>
         </a>
     </div>
-    <div onclick="toggle_visibility('productTable2'); hide_visibility('productTable1'); hide_visibility('productTable3')" id= 'product2' class="col-12 col-sm-3 d-flex justify-content-center mr-4 ml-4 border pt-2">
+    <!-- Oxidacion -->
+    <div onclick="button_click('productTable2', 'product2'); button_click_remove('productTable1', 'product1'); button_click_remove('productTable3', 'product3')" id= 'product2' class="product-button col-12 col-sm-3 d-flex justify-content-center mr-4 ml-4 pt-4">
         <a href="#">
             <img src="images/adsorvente.png" alt="logo GCS" style="width:200px">
             <p class="border-top pt-3 text-center">Oxidaque</p>
         </a>
     </div>
-    <div onclick="toggle_visibility('productTable3'); hide_visibility('productTable2'); hide_visibility('productTable1')" id= 'product3' class="col-12 col-sm-3 d-flex justify-content-center mr-4 ml-4 border pt-2">
+    <!-- Hidrogenacion -->
+    <div onclick="button_click('productTable3', 'product3'); button_click_remove('productTable2', 'product2'); button_click_remove('productTable1', 'product1')" id= 'product3' class="product-button col-12 col-sm-3 d-flex justify-content-center mr-4 ml-4 pt-4">
         <a href="#">
             <img src="images/adsorvente.png" alt="logo GCS" style="width:200px">
             <p class="border-top pt-3 text-center">Hidrogenacion</p>
@@ -73,11 +80,11 @@
 
 </div>
 
-<div class="m-4">
+<div id="product-table-container" class="pt-4 ml-4 mr-4 mb-4">
 
     <!-- Adsorbentes -->
-    <div id='productTable1' class='product-table' >
-        <div class="mt-4 border-bottom border-danger">
+    <div id='productTable1' class='product-table ml-3 mr-3'>
+        <div class="pt-4 border-bottom border-danger">
             <h3>Adsorbentes</h3>
         </div>
         <div class="d-flex justify-content-center">
@@ -110,7 +117,7 @@
     <!-- /Adsorbentes -->
 
     <!-- Oxidacion -->
-    <div id='productTable2' class='product-table'>
+    <div id='productTable2' class='product-table ml-3 mr-3'>
         <div class="mt-4 border-bottom border-danger">
             <h3>Oxidacion</h3>
         </div>
@@ -144,7 +151,7 @@
     <!-- /Oxidacion -->
 
     <!-- Hidrogenacion -->
-    <div id='productTable3' class='product-table'>
+    <div id='productTable3' class='product-table ml-3 mr-3'>
         <div class="mt-4 border-bottom border-danger">
             <h3>Hidrogenacion</h3>
         </div>
@@ -183,7 +190,39 @@
 
 </div>
 
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+    <div class="row pl-3 pr-3 pb-3">
+        <div class="col-0 col-sm-1 col-md-1"></div>
+        <!-- Contacto -->
+        <div class="col-12 col-sm-4 col-md-6 order-sm-2  mt-4">
+            <h5 class="mb-2 mt-2 mt-sm-0">CONTACTO</h5>
+            <div class="footer-border mb-2"></div>
+            <div class="row">
+                <div class="col-6"> 
+                    <div class="row">
+                        <i class="fas fa-mobile-alt col-12 d-flex justify-content-center mb-2 mt-2"></i>
+                        <p class="col-12 d-flex justify-content-center">011 73683300</p>
+                    </div>
+                </div>
+                <div class="col-6"> 
+                    <div class="row">
+                        <i class="fas fa-envelope col-12 d-flex justify-content-center mb-2 mt-2"></i>
+                        <p class="col-12 d-flex justify-content-center">francozambruno@gcssas.com.ar</p>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
 
+        <!-- BASF -->
+        <div class="col-12 col-sm-3 col-md-3 mt-4 mb-0 pl-2 pr-2">
+            <p class="text-center mb-0">Agentes de:</p>
+            <img src="images/BASFlogo.png" class="GSC-logo mx-auto d-block">
+        </div>
+        <div class="col-0 col-sm-1 col-md-1 order-sm-3"></div>
+    </div>
+</footer>
 
 <!-- ===== SCRIPTS ===== -->
 <!-- Bootstrap -->
@@ -192,6 +231,6 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <!-- Own -->
 <script src="js/script.js"></script>
-</body>
 
+</body>
 </html>

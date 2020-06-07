@@ -1,11 +1,17 @@
-/*Para DEBUG*/
-/*
+/*Para DEBUG
+
 * {
     background: #000 !important;
     color: #0f0 !important;
     outline: solid #f00 1px !important;
   }
-  */
+
+
+/* Esto es para hacer DEBUG, despues hay que borrarlo
+[class*=col-] {
+    border: solid red 4px;
+}
+*/
 
 html,body {
     width: 100%;
@@ -98,6 +104,14 @@ li {
     height: 600 px;
 }
 
+.product-button-color {
+    background-color: #d6d5d9;
+}
+
+.product-table-container-color {
+    background-color: #d6d5d9;
+}
+
 .product-table {
     display: none;
 }
@@ -110,9 +124,19 @@ li {
     width: 80%;
 }
 
+.contact-image {
+    object-fit: contain;
+    width: 70vh;
+}
+
 .footer {
     background-color: #372F39;
     color: #fffffc;
+}
+
+.footer-border {
+    border-bottom:solid;
+    border-bottom-width: thin;
 }
 
 

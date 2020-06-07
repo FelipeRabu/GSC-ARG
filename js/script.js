@@ -1,49 +1,70 @@
 
+function button_click(idTable, idButton) {
+  //Colorea el boton
+  let element = document.getElementById(idButton);
+  element.classList.toggle("product-button-color");
 
-function toggle_visibility(id) {
-  let e = document.getElementById(id);
-  if(e.style.display == 'block')
-     e.style.display = 'none';
-  else
-     e.style.display = 'block';
+  //Mostrar o ocultar la tabla
+  let element2 = document.getElementById(idTable);
+  element2.classList.toggle("product-table-on");
+
+  //Colorea el continer de la tablas
+  let element3 = document.getElementById('product-table-container');
+  let table1 = document.getElementById('productTable1');
+  let table2 = document.getElementById('productTable2');
+  let table3 = document.getElementById('productTable3');
+  let table1Style = window.getComputedStyle(table1, null).getPropertyValue("display")
+  let table2Style = window.getComputedStyle(table2, null).getPropertyValue("display")
+  let table3Style = window.getComputedStyle(table3, null).getPropertyValue("display")
+  if(table1Style == 'block' || table2Style == 'block' || table3Style == 'block') {
+    element3.classList.add("product-table-container-color");
+  }
+  else {
+    element3.classList.remove("product-table-container-color");
+  }
 }
 
-function hide_visibility(id) {
-  let e = document.getElementById(id);
-     e.style.display = 'none';
+function button_click_remove(idTable, idButton) {
+  let element = document.getElementById(idButton);
+  element.classList.remove("product-button-color");
+
+  let element2 = document.getElementById(idTable);
+  element2.classList.remove("product-table-on");
+
 }
+
+
+
+//=================================================================================
+
 
 
 /*
-const product1 = document.getElementById('product1');
-const productTable1 = document.getElementById('productTable1');
-product1.addEventListener('click', function () {
+function button_color(id) {
+  let element = document.getElementById(id);
+  element.classList.toggle("product-button-color");
 
-  console.log(productTable1.style.display)
+  let element2 = document.getElementById('product-table-container');
+  element2.classList.toggle("product-table-container-color");
+}
 
-    if (productTable1.style.display === "none") {
-        console.log('HOLA')
-        productTable1.classList.add('product-table-on')
-      } else {
-        console.log('CHAU')
-        productTable1.classList.remove('product-table-on')
-      }
+function button_color_remove(id) {
+  let element = document.getElementById(id);
+  element.classList.remove("product-button-color");
+}
 
+function toggle_visibility(id) {
+  let element = document.getElementById(id);
+  if(element.style.display == 'block')
+  element.style.display = 'none';
+  else
+  element.style.display = 'block';
+}
 
-})
-
-const product2 = document.getElementById('product2');
-const productTable2 = document.getElementById('productTable2');
-product2.addEventListener('click', function () {
-    productTable2.classList.add('product-table-on')
-})
-
-const product3 = document.getElementById('product3');
-const productTable3 = document.getElementById('productTable3');
-product3.addEventListener('click', function () {
-    productTable3.classList.add('product-table-on')
-})
-
+function hide_visibility(id) {
+  let element = document.getElementById(id);
+  element.style.display = 'none';
+}
 */
 
 
